@@ -1,5 +1,6 @@
 <body>
-  Player 1 attacks Player 2. Confirmed!<br>
-  Player 1 points: <%= @game.player1.points %><br>
-  Player 2 points: <%= @game.player2.points %><br>
+  <%= @game.players[@game.opponent_player_index].name%> attacked <%= @game.players[@game.current_player_index].name %>. Confirmed!<br>
+  <%= @game.players[0].name %> points: <%= @game.players[0].points %><br>
+  <%= @game.players[1].name %> points: <%= @game.players[1].points %><br>
+  <a href="/play">OK</a>
 </body>

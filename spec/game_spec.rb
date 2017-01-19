@@ -7,8 +7,8 @@ describe Game do
 
   describe '#attack' do
     it "attacks another player" do
-      expect(player1).to receive(:reduce)
-      game.attack(player1)
+      expect(player2).to receive(:reduce)
+      game.attack
     end
   end
 

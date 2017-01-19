@@ -1,7 +1,7 @@
 <body>
 <h3>Player 1</h3>
-<h4><%= @game.player1.name %> </h4>
+<h4><%= @game.player1.name %>: <%= @game.player1.points %>HP</h4>
 <h3>Player 2</h3>
-<h4><%= @game.player2.name %>: 60HP</h4>
-<a href="/attack">Player 1 Attack</a>
+<h4><%= @game.player2.name %>: <%= @game.player2.points %>HP</h4>
+<%= @game.players[@game.current_player_index].name%> <a href="/attack">attack</a>
 </body>
