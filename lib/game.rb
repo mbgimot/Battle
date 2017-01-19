@@ -1,23 +1,25 @@
 class Game
-
   attr_reader :current_player_index, :opponent_player_index, :players
 
-  # @game = nil
-
-  def self.make(player1, player2)
-    @game = Game.new(player1, player2)
-  end
+  @game = nil
+  #
+  # def self.make(player1, player2)
+  #   @game = Game.new(player1, player2)
+  # end
 
   def self.instance
-    # @game = self
     @game
+  end
+
+  def self.instance=(value)
+    @game = value
   end
 
   def initialize(player1, player2)
     @players = [player1, player2]
     @current_player_index = 0
     @opponent_player_index = 1
-    # self.class.instance = self
+    self.class.instance = self
   end
 
   def player1
