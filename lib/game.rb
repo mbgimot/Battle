@@ -25,6 +25,10 @@ class Game
     @players[@opponent_player_index].reduce
   end
 
+  def not_game_over?
+    @players[@opponent_player_index].points > 0
+  end
+
   private
 
   def opponent
