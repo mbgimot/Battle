@@ -21,11 +21,13 @@ class Game
     opponent
   end
 
-  def opponent
-    @current_player_index == 0 ? @opponent_player_index = 1 : @opponent_player_index = 0
-  end
-
   def attack
     @players[@opponent_player_index].reduce
+  end
+
+  private
+
+  def opponent
+    @current_player_index == 0 ? @opponent_player_index = 1 : @opponent_player_index = 0
   end
 end
